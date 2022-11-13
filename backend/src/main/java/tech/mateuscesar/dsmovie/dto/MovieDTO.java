@@ -22,7 +22,7 @@ public MovieDTO(Long id, String title, Double score, Integer count, String image
 
 
 public MovieDTO(Movie movie) {
-	id = movie.getId();
+	id = movie.getId(); //estava this.movie mas nao tem necessidade no de cima precisa é um do objeto e o outro do argumento
 	title = movie.getTitle();
 	score = movie.getscore();
 	count = movie.getCount();

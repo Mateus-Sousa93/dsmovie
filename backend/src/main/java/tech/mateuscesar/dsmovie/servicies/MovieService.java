@@ -1,6 +1,6 @@
 package tech.mateuscesar.dsmovie.servicies;
 
-
+//responsavel por buscar os filmes
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -11,10 +11,10 @@ import tech.mateuscesar.dsmovie.dto.MovieDTO;
 import tech.mateuscesar.dsmovie.entities.Movie;
 import tech.mateuscesar.dsmovie.repositories.MovieRepository;
 
-@Service
+@Service //componente do sitstema é necessaria por ser classe personalizada
 public class MovieService {
-	@Autowired
-	private MovieRepository repository;
+	@Autowired //
+	private MovieRepository repository; //busca filme no banco de dados
 	
 	@Transactional(readOnly=true)
 	public Page<MovieDTO> findAll(Pageable pageable){
